@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Stock Viewer</string>
+    <string name="tab_text_1">Watchlist</string>
+    <string name="tab_text_2">View Stock</string>
+    <string name="tab_text_3">Stock News</string>
+    <string name="tab_text_4">Top Movers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopMoversActivity">
+
+    <RadioGroup
+        android:layout_marginTop="100dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <RadioButton
+            android:id="@+id/gainers"
+            style="@style/RadioButtonStyle"
+            android:background="@drawable/radio_left"
+            android:text="Gainers" />
+
+        <RadioButton
+            android:id="@+id/losers"
+            style="@style/RadioButtonStyle"
+            android:background="@drawable/radio_right"
+            android:text="Losers" />
+    </RadioGroup>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/moversRecycler">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:id="@+id/advanced"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"
+        android:text="Get Advanced"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>

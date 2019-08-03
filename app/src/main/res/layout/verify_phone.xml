@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src = "@drawable/chart"
+        android:id="@+id/chart"/>
+
+    <TextView
+        android:layout_below="@+id/chart"
+        android:id="@+id/text"
+        android:paddingTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wait for the code sent..."
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_below="@id/text"
+        android:paddingTop="20dp"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/container"
+        android:layout_below="@+id/progressBar"
+        android:padding="10dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:maxLength="6"
+            android:id="@+id/code"
+            android:hint="Enter Verification Code"
+            android:digits="0123456789"/>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Sign In"
+        android:id="@+id/signInButton"
+        android:layout_below="@+id/container"
+        android:backgroundTint="#0000FF"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFF"/>
+
+</RelativeLayout>

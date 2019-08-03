@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CompanyStockDetails">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/app_bar_layout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_collapseMode="pin"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/main_view"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#789">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/company_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lines="1"
+                    android:textSize="25sp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/company_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/company_name"
+                    android:lines="1" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#004"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/close"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="25sp"
+                    android:layout_alignParentLeft="true" />
+                <TextView
+                    android:layout_marginLeft="6dp"
+                    android:id="@+id/currency"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_toRightOf="@id/close"
+                    android:layout_alignBaseline="@id/close"/>
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/close" />
+
+                <TextView
+                    android:id="@+id/change"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/currency"
+                    android:layout_alignBaseline="@id/currency" />
+
+                <TextView
+                    android:id="@+id/percentage_change"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/change"
+                    android:layout_alignBaseline="@id/change"/>
+                <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Watchlist"
+                android:layout_alignParentRight="true"
+                    android:id="@+id/watchButton"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:padding="12dp">
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:indeterminate="true" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+                <TextView
+                    android:layout_margin="2dp"
+                    android:id="@+id/open_text"
+                    android:text="Open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_margin="2dp"
+                    android:id="@+id/high_text"
+                    android:text="High"
+                    android:layout_below="@id/open_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_margin="2dp"
+                    android:id="@+id/low_text"
+                    android:text="Low"
+                    android:layout_below="@id/high_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/open"
+                    android:layout_marginLeft="45dp"
+                    android:layout_alignBaseline="@id/open_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/high"
+                    android:layout_marginLeft="45dp"
+                    android:layout_alignBaseline="@id/high_text"
+                    android:layout_below="@id/open_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/low"
+                    android:layout_marginLeft="45dp"
+                    android:layout_alignBaseline="@id/low_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/market_capital_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Market Capital"
+                    android:layout_alignBaseline="@+id/open"
+                    android:layout_alignBottom="@+id/open"
+                    android:layout_alignLeft="@+id/sector_text"
+                    android:layout_alignStart="@+id/sector_text" />
+
+                <TextView
+                    android:id="@+id/sector_text"
+                    android:text="Sector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/market_capital_text"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/industry_text"
+                    android:text="Industry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/sector_text"
+                    android:layout_alignStart="@+id/sector_text"
+                    android:layout_below="@+id/high" />
+
+                <TextView
+                    android:id="@+id/market_capital"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/market_capital_text"
+                    android:layout_alignBottom="@+id/market_capital_text"
+                    android:layout_toEndOf="@+id/market_capital_text"
+                    android:layout_toRightOf="@+id/market_capital_text" />
+
+                <TextView
+                    android:id="@+id/sector"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/high"
+                    android:layout_alignBottom="@+id/high"
+                    android:layout_toEndOf="@+id/market_capital_text"
+                    android:layout_toRightOf="@+id/market_capital_text"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/industry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/low"
+                    android:layout_alignBottom="@+id/low"
+                    android:layout_toEndOf="@+id/market_capital_text"
+                    android:layout_toRightOf="@+id/market_capital_text"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                android:padding="12dp"
+                android:text="IPO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="23sp"/>
+
+                <TextView
+                    android:id="@+id/ipo"
+                    android:padding="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:textSize="23sp"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#002"/>
+            <TextView
+                android:id="@+id/summary"
+                android:padding="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="23sp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

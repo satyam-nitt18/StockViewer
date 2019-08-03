@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:layout_height="200dp">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:padding="2dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/image"
+        android:layout_toLeftOf="@id/image"
+        android:layout_toStartOf="@id/image"
+        android:lines="2"
+        android:textStyle="bold"
+        android:text="Deep Dive: Value stocks may break out, helped by rising interest rates, inflation, potential trade war"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/title"
+        android:layout_alignStart="@id/title"
+        android:layout_below="@id/title"
+        android:lines="1"
+        android:text="2018-04-03 09:09"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date"
+        android:layout_alignStart="@+id/date"
+        android:layout_below="@id/date"
+        android:layout_toLeftOf="@id/image"
+        android:layout_toStartOf="@id/image"
+        android:lines="2"
+        android:textColor="#519af9"
+        android:text="https://blog.hubspot.com/marketing/mark-zuckerberg-testify-congress"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/url"
+        android:layout_alignStart="@id/url"
+        android:layout_below="@id/image"
+        android:text="'Amazon, Facebook, and Alphabet are dominant but that’s not enough, says the man who wrote the book on antitrust law.'" />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/url"
+        android:layout_alignStart="@id/url"
+        android:layout_below="@id/url"
+        android:text="Marketwatch.com"
+        android:textSize="12sp" />
+</RelativeLayout>

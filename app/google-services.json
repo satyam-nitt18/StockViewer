@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "909542656455",
+    "firebase_url": "https://stockviewer-36859.firebaseio.com",
+    "project_id": "stockviewer-36859",
+    "storage_bucket": "stockviewer-36859.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909542656455:android:2c233754592b8ac2",
+        "android_client_info": {
+          "package_name": "com.example.stockviewer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909542656455-vvoco4i8uup2htrd98btcd05f7shkq48.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.stockviewer",
+            "certificate_hash": "132a7d11e8b82b32f068e38997f5ec3970997270"
+          }
+        },
+        {
+          "client_id": "909542656455-6dp5qa3enqbqnaaslsq21i46osh03hkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWbxIMsA4128SYY3Ln1x9mzoRi638Zv4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909542656455-6dp5qa3enqbqnaaslsq21i46osh03hkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
